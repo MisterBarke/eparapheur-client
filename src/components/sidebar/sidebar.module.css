@@ -1,0 +1,31 @@
+.colorText {
+    color: orangered !important;
+}
+
+.activeLink {
+    background-color: orangered !important;
+    color: white !important;
+    box-shadow: 0px 4px 4px 0px #00000040 !important;
+
+}
+
+.hoverLink:hover {
+    background-color: orangered !important;
+    color: #ffff !important;
+}
+
+.list {
+    color: white !important;
+}
+
+.sideTittle {
+    color: orangered !important;
+}
+
+.hrColor {
+    border: 0.5px solid orangered !important;
+}
+
+.bgSidebar {
+    background-color: orangered !important;
+}
