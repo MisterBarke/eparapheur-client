@@ -1,0 +1,8 @@
+.hoverLink:hover {
+    background-color: orangered !important;
+    color: #ffff !important;
+}
+
+.colorText{
+    color: orangered !important;
+}

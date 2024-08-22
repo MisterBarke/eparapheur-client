@@ -48,8 +48,7 @@ const Sidebar = () => {
                                 <span className="w-full font-bold px-5 text-md">Dashboard</span> <FaChevronDown size={25}/>
                             </button>
                             <div
-                                className={`transition-all duration-300 ease-in-out transform overflow-hidden ${isDashboardOpen ? 'max-h-40 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}
-                            >
+                                className={`transition-all duration-300 ease-in-out transform overflow-hidden ${isDashboardOpen ? 'max-h-40 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}>
                                 <ul className="pl-8 space-y-4 mt-2">
                                     <li>
                                         <Link className={`link ${pathname === '/dashboard/overview' ? activer : desactiver}`} href="/dashboard/overview">
