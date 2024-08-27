@@ -61,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           <ul className="space-y-6 flex flex-col items-end w-full text-md font-bold mt-6">
             <li className="w-full">
               <button
-                className={`flex items-center w-full ${pathname.startsWith('/dashboard') ? activer : desactiver}`}
+                className={`flex items-center w-full ${pathname.startsWith('/') ? activer : desactiver}`}
                 onClick={toggleDashboardMenu}
               >
                 <LuLayoutDashboard size={25} />
@@ -72,7 +72,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                 <ul className="pl-8 space-y-4 mt-2">
                   <li>
                     <Link
-                      className={`flex items-center ${pathname === '/dashboard/overview' ? activer : desactiver}`}
+                      className={`flex items-center ${pathname === '/dashboard/nouveaux' ? activer : desactiver}`}
                       href="/dashboard/overview"
                       onClick={closeSidebarOnMobile}
                     >
@@ -82,7 +82,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                   </li>
                   <li>
                     <Link
-                      className={`flex items-center ${pathname === '/dashboard/stats' ? activer : desactiver}`}
+                      className={`flex items-center ${pathname === '/dashboard/attentes' ? activer : desactiver}`}
                       href="/dashboard/stats"
                       onClick={closeSidebarOnMobile}
                     >
@@ -92,7 +92,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                   </li>
                   <li>
                     <Link
-                      className={`flex items-center ${pathname === '/dashboard/reports' ? activer : desactiver}`}
+                      className={`flex items-center ${pathname === '/dashboard/traites' ? activer : desactiver}`}
                       href="/dashboard/reports"
                       onClick={closeSidebarOnMobile}
                     >

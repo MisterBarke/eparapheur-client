@@ -35,13 +35,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
   }, []);
 
   return (
-    <nav className="drop-shadow-md flex justify-end items-center bg-white py-2 px-10">
-      {/* Burger button for mobile */}
-      {/* <div className="md:hidden">
-        <button onClick={toggleSidebar} className="p-2 text-black bg-white rounded-full">
-          <FaBars size={24} />
-        </button>
-      </div> */}
+    <nav className="drop-shadow-md flex justify-end items-center bg-white py-2 px-10 fixed w-full z-10 right-0 top-0">
 
       <div className="relative flex items-center justify-between">
         <button
