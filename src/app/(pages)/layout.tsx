@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }):
           </div>
           <div className="w-full relative">
             <Navbar toggleSidebar={toggleSidebar} />
-            <main className="px-3 lg:px-16 pt-28 pb-5 bg-orange-400">
+            <main className="px-3 lg:px-16 pt-28 pb-5">
               {children}
             </main>
           </div>
