@@ -61,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           <ul className="space-y-6 flex flex-col items-end w-full text-md font-bold mt-6">
             <li className="w-full">
               <button
-                className={`flex items-center w-full ${pathname.startsWith('/') ? activer : desactiver}`}
+                className={`flex items-center w-full ${pathname.startsWith('/dashboard') ? activer : desactiver}`}
                 onClick={toggleDashboardMenu}
               >
                 <LuLayoutDashboard size={25} />
@@ -94,6 +94,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                     <Link
                       className={`flex items-center ${pathname === '/dashboard/traites' ? activer : desactiver}`}
                       href="/dashboard/traites"
+
                       onClick={closeSidebarOnMobile}
                     >
                       <FaEnvelopeCircleCheck className="text-green-600" size={25} />
