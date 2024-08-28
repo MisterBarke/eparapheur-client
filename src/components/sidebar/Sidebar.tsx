@@ -73,7 +73,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                   <li>
                     <Link
                       className={`flex items-center ${pathname === '/dashboard/nouveaux' ? activer : desactiver}`}
-                      href="/dashboard/overview"
+                      href="/dashboard/nouveaux"
                       onClick={closeSidebarOnMobile}
                     >
                       <FaEnvelope className="text-blue-600" size={25} />
@@ -83,7 +83,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                   <li>
                     <Link
                       className={`flex items-center ${pathname === '/dashboard/attentes' ? activer : desactiver}`}
-                      href="/dashboard/stats"
+                      href="/dashboard/attente"
                       onClick={closeSidebarOnMobile}
                     >
                       <FaEnvelopeOpenText className="text-yellow-400" size={25} />
@@ -93,7 +93,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                   <li>
                     <Link
                       className={`flex items-center ${pathname === '/dashboard/traites' ? activer : desactiver}`}
-                      href="/dashboard/reports"
+                      href="/dashboard/traites"
                       onClick={closeSidebarOnMobile}
                     >
                       <FaEnvelopeCircleCheck className="text-green-600" size={25} />
@@ -110,7 +110,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                 onClick={closeSidebarOnMobile}
               >
                 <IoDocumentsOutline size={25} />
-                <span className="w-full font-bold px-5 text-md">Documents</span>
+                <span className="w-full font-bold px-5 text-md">Soumèttre</span>
               </Link>
             </li>
             <li className="w-full">

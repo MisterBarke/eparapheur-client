@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { PiSignInBold, PiGearBold, PiGaugeBold } from "react-icons/pi";
 import { FaBars } from 'react-icons/fa';
 import style from './navbar.module.css';
-import logo from '../../asset/images/logo.png';
+import avatar from '../../asset/images/avatar.png';
 
 interface NavbarProps {
   toggleSidebar: () => void;
@@ -44,7 +44,7 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
           className="w-full"
           onClick={toggleOpenUserMenu}
         >
-          <Image className='rounded-full h-10 w-10 bg-black ' src={logo} alt="Logo" width={50} height={50} priority />
+          <Image className='rounded-full border border-gary-500 h-10 w-10' src={avatar} alt="Profil" width={50} height={50} priority />
         </button>
         {isUserMenuOpen && (
           <div

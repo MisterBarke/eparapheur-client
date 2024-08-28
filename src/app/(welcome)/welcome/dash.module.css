@@ -1,0 +1,9 @@
+.overlay {           
+    background-image: url('../../../asset/images/lettre.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.content {
+    background-color: orangered;
+}
