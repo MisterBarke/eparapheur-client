@@ -51,15 +51,21 @@ const Navbar: React.FC<NavbarProps> = ({ toggleSidebar }) => {
             ref={menuRef}
             className="z-50 my-4 absolute right-0 top-0 mt-12 w-48 rounded-md bg-white py-2 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none transition-all duration-200 ease-out transform opacity-100 translate-y-0"
           >
-            <Link href="/profile" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
-              <PiGaugeBold size={18} className="mr-2" />
-              Dashboard
-            </Link>
-            <Link href="/settings" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+            <div className='flex flex-col justify-center items-center'>
+              <Image className='rounded-full h-16 w-16' src={avatar} alt="Profil" width={50} height={50} priority />
+              <div className="p-2 text-center">
+                <span className="block text-xs text-black font-bold uppercase">ousmane Barké</span>
+                <span className="block text-xs  text-blue-600 truncate">softart@gmail.com</span>
+              </div>
+            </div>
+            <hr className='w-full border border-gray-300' />
+
+           
+            <Link href="/settings" className="px-4 py-2 text-sm text-orange-600 hover:bg-orange-600 hover:text-white flex items-center">
               <PiGearBold size={18} className="mr-2" />
-              Settings
+              Paramètres
             </Link>
-            <Link href="/logout" className="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+            <Link href="/logout" className="px-4 py-2 text-sm text-orange-600 hover:bg-orange-600 hover:text-white flex items-center">
               <PiSignInBold size={18} className="mr-2" />
               Logout
             </Link>
