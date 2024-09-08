@@ -1,0 +1,17 @@
+
+
+/* focus:outline-none */
+.focus\:outline-none:focus {
+    outline: 0; /* Removes the default focus outline */
+  }
+  
+  /* focus:ring-2 */
+  .focus\:ring-2:focus {
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1); /* Adds a ring with a thickness of 2px */
+  }
+  
+  /* focus:ring-blue-400 */
+  .focus\:ring-blue-400:focus {
+    box-shadow: 0 0 0 2px orangered; /* Adjusts the ring color to blue-400 */
+  }
+  

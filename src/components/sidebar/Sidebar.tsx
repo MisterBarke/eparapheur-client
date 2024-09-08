@@ -17,10 +17,10 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
-  const [isDashboardOpen, setIsDashboardOpen] = useState(false);
+  const [isDashboardOpen, setIsDashboardOpen] = useState(true);
   const pathname = usePathname();
   const activer = 'flex items-center p-2 rounded-l-lg bg-orange-500 text-white hover:bg-orange-600';
-  const desactiver = 'flex items-center p-2 rounded-l-lg text-gray-700 hover:bg-gray-200';
+  const desactiver = 'flex items-center p-2 rounded-l-lg text-gray-700 hover:bg-orange-600 hover:text-white';
 
   const toggleDashboardMenu = (): void => {
     setIsDashboardOpen(!isDashboardOpen);
@@ -61,19 +61,29 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
           <ul className="space-y-6 flex flex-col items-end w-full text-md font-bold mt-6">
             <li className="w-full">
               <button
-                className={`flex items-center w-full ${pathname.startsWith('/dashboard') ? activer : desactiver}`}
+                className={`flex items-center w-full}`}
                 onClick={toggleDashboardMenu}
               >
-                <LuLayoutDashboard size={25} />
-                <span className="w-full font-bold px-5 text-md">Dashboard</span>
+                <LuLayoutDashboard size={30} className='ml-2 text-black'/>
+                <span className="w-full font-bold px-3 text-md">Menu</span>
                 <FaChevronDown size={25} />
               </button>
-              <div className={`transition-all duration-300 ease-in-out transform overflow-hidden ${isDashboardOpen ? 'max-h-40 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}>
+              <div className={`transition-all duration-300 ease-in-out transform overflow-hidden ${isDashboardOpen ? 'max-h-56 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-2'}`}>
                 <ul className="pl-8 space-y-4 mt-2">
+                <li>
+                    <Link
+                      className={`flex items-center ${pathname === '/' ? activer : desactiver}`}
+                      href="/"
+                      onClick={closeSidebarOnMobile}
+                    >
+                      <FaEnvelope className="text-black" size={25} />
+                      <span className="w-full font-bold px-5 text-md">Dashboard</span>
+                    </Link>
+                  </li>
                   <li>
                     <Link
-                      className={`flex items-center ${pathname === '/dashboard/nouveaux' ? activer : desactiver}`}
-                      href="/dashboard/nouveaux"
+                      className={`flex items-center ${pathname === '/nouveaux' ? activer : desactiver}`}
+                      href="/nouveaux"
                       onClick={closeSidebarOnMobile}
                     >
                       <FaEnvelope className="text-blue-600" size={25} />
@@ -82,8 +92,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                   </li>
                   <li>
                     <Link
-                      className={`flex items-center ${pathname === '/dashboard/attentes' ? activer : desactiver}`}
-                      href="/dashboard/attente"
+                      className={`flex items-center ${pathname === '/attentes' ? activer : desactiver}`}
+                      href="/attentes"
                       onClick={closeSidebarOnMobile}
                     >
                       <FaEnvelopeOpenText className="text-yellow-400" size={25} />
@@ -92,8 +102,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
                   </li>
                   <li>
                     <Link
-                      className={`flex items-center ${pathname === '/dashboard/traites' ? activer : desactiver}`}
-                      href="/dashboard/traites"
+                      className={`flex items-center ${pathname === '/traites' ? activer : desactiver}`}
+                      href="/traites"
 
                       onClick={closeSidebarOnMobile}
                     >

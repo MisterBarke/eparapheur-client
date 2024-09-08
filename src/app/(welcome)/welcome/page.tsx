@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image';
 import img from '../../../asset/images/lettre.jpg'
+import Link from 'next/link';
 import style from './dash.module.css'
 const page: React.FC = () => {
   return (
@@ -10,7 +11,10 @@ const page: React.FC = () => {
           <h2 className='md:text-3xl text-xl text-center text-orange-600 font-extrabold'>Bienvenue sur E-PARAHEUR BAGRI-Niger</h2>
           <p className='text-center font-semibold'>Votre outil de gestion de parapheur numérique. Simplifiez la gestion de vos documents et gagnez en efficacité grâce à notre solution intuitive. </p>
           <div>
-            <button className='bg-orange-600 w-52 text-white font-semibold p-2 rounded-lg hover:bg-orange-500'>S&apos;incrire</button>
+            {/* <button className='bg-orange-600 w-52 text-white font-semibold p-2 rounded-lg hover:bg-orange-500'>S&apos;incrire</button> */}
+            <Link href="/register" className="bg-orange-600 w-52 text-white font-semibold p-2 px-12 rounded-lg hover:bg-orange-500">
+            S&apos;incrire
+                    </Link>
           </div>
         </div>
         <div className={`w-full md:w-1/2 p-1`}>
@@ -32,7 +36,7 @@ const page: React.FC = () => {
             <li>
               <h2 className='text-md font-bold text-orange-600'>Créer un compte</h2>
               <p>
-                Pour commencer, cliquez sur le bouton S'inscrire Vous serez redirigé vers une page d'inscription.
+                Pour commencer, cliquez sur le bouton S&apos;inscrire Vous serez redirigé vers une page d&apos;inscription.
               </p>
             </li>
             <li>
@@ -48,7 +52,7 @@ const page: React.FC = () => {
             <li>
               <h2 className='text-md font-bold text-orange-600'>Connexion</h2>
               <p>
-                Une fois votre compte activé, revenez sur la page d'accueil et cliquez sur "Se connecter". Entrez vos identifiants pour accéder à votre tableau de bord.
+                Une fois votre compte activé, revenez sur la page d&apos;accueil et cliquez sur Se connecter. Entrez vos identifiants pour accéder à votre tableau de bord.
               </p>
             </li>
           </ol>
