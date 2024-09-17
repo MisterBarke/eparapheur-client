@@ -6,14 +6,8 @@ import Table from '@/components/table/Table';
 function Page() {
     const columnTitles = [
         'Titre',
-        'Action',
         'Identifiant',
-        'Date de candidature',
-        'Statut',
-        'Date de Statut',
-        'Etape suivant',
-        'Lieu',
-        'Stage/temps plein'
+        'Date de candidature' 
     ];
 
     const rowData = [
