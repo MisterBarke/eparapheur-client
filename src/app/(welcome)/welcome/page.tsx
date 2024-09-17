@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import img from '../../../asset/images/lettre.jpg'
 import Link from 'next/link';
+import { IoIosArrowDropdown } from "react-icons/io";
 import style from './dash.module.css'
 const page: React.FC = () => {
   return (
@@ -10,11 +11,12 @@ const page: React.FC = () => {
         <div className={`flex flex-col justify-center items-center w-full md:w-1/2 space-y-6 py-1 px-4`}>
           <h2 className='md:text-3xl text-xl text-center text-orange-600 font-extrabold'>Bienvenue sur E-PARAHEUR BAGRI-Niger</h2>
           <p className='text-center font-semibold'>Votre outil de gestion de parapheur numérique. Simplifiez la gestion de vos documents et gagnez en efficacité grâce à notre solution intuitive. </p>
-          <div>
+          <div className='p-5'>
+            
+            <Link className='text-blue-600 flex justify-between animate-pulse' href={'#guide'}>Cliquez ici pour voir comment s&apos;inscrire <IoIosArrowDropdown className='mx-2' size={30}/></Link>
+            
             {/* <button className='bg-orange-600 w-52 text-white font-semibold p-2 rounded-lg hover:bg-orange-500'>S&apos;incrire</button> */}
-            <Link href="/register" className="bg-orange-600 w-52 text-white font-semibold p-2 px-12 rounded-lg hover:bg-orange-500">
-            S&apos;incrire
-                    </Link>
+            
           </div>
         </div>
         <div className={`w-full md:w-1/2 p-1`}>
@@ -23,7 +25,7 @@ const page: React.FC = () => {
       </section>
 
       <div className='flex flex-col justify-center items-center'>
-        <h2 className='text-center text-3xl font-bold text-orange-600'>Guide d&apos;inscription</h2>
+        <h2 id='guide' className='text-center text-3xl font-bold text-orange-600'>Guide d&apos;inscription</h2>
       </div>
 
       <section className='md:flex justify-center items-center w-full h-screen'>
@@ -56,6 +58,10 @@ const page: React.FC = () => {
               </p>
             </li>
           </ol>
+          <div className='flex justify-center items-center p-10'>
+          <Link href="/register" className="bg-orange-600 w-52 text-center text-white font-semibold p-2 px-12 rounded-lg hover:bg-orange-500">
+            S&apos;incrire</Link>
+          </div>
         </div>
       </section>
     </div>
