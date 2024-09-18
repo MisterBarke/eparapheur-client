@@ -41,13 +41,13 @@ const Table: React.FC<TableProps> = ({
 
     return (
         <div className="overflow-x-auto">
-            <table className={`table-auto ${tableSize} w-full`}>
+            <table className={`table-auto ${tableSize} w-full text-center`}>
                 <thead>
                     <tr className="bg-orange-400">
                         {columnTitles.map((title, index) => (
                             <th
                                 key={index}
-                                className={`${textStyle} text-start p-2 md:py-4 font-bold text-md text-white`}
+                                className={`${textStyle} text-center p-2 md:py-4 font-bold text-md text-white`}
                             >
                                 {title}
                             </th>

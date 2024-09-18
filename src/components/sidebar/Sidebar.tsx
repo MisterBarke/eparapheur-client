@@ -49,7 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, toggleSidebar }) => {
         className={`overflow-hidden overflow-y-auto fixed z-40 top-0 left-0 bg-white h-screen transition-transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} md:translate-x-0 md:block drop-shadow-md border border-green-100`}
         aria-label="Sidebar"
       >
-        <div className="px-3 flex flex-col w-full py-4 overflow-x-hidden">
+        <div className="pl-3 flex flex-col w-full py-4 overflow-x-hidden">
           <div className="flex flex-col w-full items-center mb-4">
             {/* logo */}
             <Image src={logo} alt="Logo" width={100} height={100} priority />
